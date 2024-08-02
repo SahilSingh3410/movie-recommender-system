@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 
+st.set_page_config(layout="wide")
+
 movies = pickle.load(open('movies.pkl','rb'))
 movie_list = pd.DataFrame(movies)
 
@@ -38,32 +40,33 @@ if st.button('Recommend'):
         link1 = f'[{text1}]({url1})'
         st.markdown(link1,unsafe_allow_html=True)
         st.text(genres[0])
-        st.image(poster[0])
+        st.image(poster[0], width=80)
     with col2:
         url2 = detail5[1]
         text2 = names[1]
         link2 = f'[{text2}]({url2})'
         st.markdown(link2, unsafe_allow_html=True)
         st.text(genres[1])
-        st.image(poster[1])
+        st.image(poster[1], width=80)
     with col3:
         url3 = detail5[2]
         text3 = names[2]
         link3 = f'[{text3}]({url3})'
         st.markdown(link3, unsafe_allow_html=True)
         st.text(genres[2])
-        st.image(poster[2])
+        st.image(poster[2], width=80)
     with col4:
         url4 = detail5[3]
         text4 = names[3]
         link4 = f'[{text4}]({url4})'
         st.markdown(link4, unsafe_allow_html=True)
         st.text(genres[3])
-        st.image(poster[3])
+        st.image(poster[3], width=80)
     with col5:
         url5 = detail5[4]
         text5 = names[4]
         link5 = f'[{text5}]({url5})'
         st.markdown(link5, unsafe_allow_html=True)
         st.text(genres[4])
-        st.image(poster[4])
+        st.image(poster[4], width=80)
+
